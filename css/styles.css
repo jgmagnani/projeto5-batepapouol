@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+header {
+  margin-bottom: 106px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 6px 0px #0000000d;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.menu img {
+  margin: 16px 22px 11px 22px;
+}
+
+.menu img:nth-child(2) {
+  width: 42px;
+}
+
+.enviarMensagem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  box-shadow: 0px -4px 6px 0px #0000000d;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.enviarMensagem input {
+  margin-left: 22px;
+  border: none;
+  height: 30px;
+  width: 145px;
+  left: 17px;
+  top: 612px;
+  border-radius: nullpx;
+}
+
+.enviarMensagem img {
+  margin-right: 22px;
+}
+
+article{
+    background-color: #f3f3f3;
+}
+
+.chat{
+    background-color: #f3f3f3;
+}
+
+.cameIn{
+    width: 100%;
+    background-color:#DCDCDC;
+    margin-bottom: 4px;
+}
+
+.msgAll{
+    width: 100%;
+    background-color:#ffffff;
+    margin-bottom: 4px;
+}
+
+.msgPrivate{
+    width: 100%;
+    background-color: #FFDEDE;
+    margin-bottom: 4px;
+}
+
+.cameIn p{
+  height: 40px;
+  width: 100%;
+  top: 106px;
+  border-radius: 2px;
+  margin-left: 8px;
+  margin-right: 8px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  background-color: #DCDCDC;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.msgAll p{
+    height: 40px;
+    width: 100%;    
+    border-radius: 2px;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;    
+    text-align: left;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+}
+
+.msgPrivate p{
+    height: 40px;
+    width: 100%;    
+    border-radius: 2px;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;    
+    text-align: left;
+    background-color: #FFDEDE;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    
+}
