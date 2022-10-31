@@ -24,8 +24,11 @@
     </article>
 
     <footer class="enviarMensagem">
-        <input type="text" placeholder="Escreva aqui...">
-        <img src="imagens/send.svg" alt="">
+        <input type="text" placeholder="Escreva aqui..." id="myInput">
+        <button onclick="postMessage()" id="submit">
+            <img  src="imagens/send.svg" alt="">
+        </button>
+        
     </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>    
