@@ -24,11 +24,17 @@ const promiseName = axios.post(
 );
 
 promiseName.then(conectionVerify);
+promiseName.catch(errorName);
 
 let promiseMsg = axios.get(
   'https://mock-api.driven.com.br/api/v6/uol/messages'
 );
 promiseMsg.then(carregarMensagens);
+
+function errorName(element) {
+  alert('Problema ao entrar com o nome')
+  verificaNome()
+}
 
 function conectionVerify() {
   userConect = setInterval(() => {
@@ -41,7 +47,7 @@ function conectionVerify() {
       promise.then(() => (canConnectionVerify = true));
       promise.catch(() => {
         canConnectionVerify = true;
-        alert('deu erro');
+        alert('Saiu da sala');
         clearInterval(userConect);
       });
     }
@@ -112,8 +118,8 @@ function postMessage() {
   sendMessage.catch(messageFail);
 }
 
-function messageFail(element) {
-  console.log('MENSAGEM DEU PAU');
+function messageFail() {
+  window.location.reload()
 }
 
 //enviar mensagem com o Enter
