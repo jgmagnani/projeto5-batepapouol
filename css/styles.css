@@ -17,6 +17,8 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  background: #FFFFFF;
+
 }
 
 .menu img {
@@ -36,7 +38,9 @@ header {
   box-shadow: 0px -4px 6px 0px #0000000d;
   position: fixed;
   bottom: 0;
-  left: 0;
+  left: 0;  
+  background: #FFFFFF;
+
 }
 
 .enviarMensagem input {
@@ -46,7 +50,7 @@ header {
   width: 145px;
   left: 17px;
   top: 612px;
-  border-radius: nullpx;
+ 
 }
 
 .enviarMensagem img {
