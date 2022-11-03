@@ -57,9 +57,7 @@ function conectionVerify() {
 function carregarMensagens(elemento) {
   msgs = elemento.data;
   renderizarMsgs(msgs);
-
-  const lastMsg = document.querySelector('.chat');
-  lastMsg.scrollIntoView(false);
+  
 }
 
 function renderizarMsgs(elemento) {
@@ -71,26 +69,29 @@ function renderizarMsgs(elemento) {
     
     if (mensagem.type === 'status') {
       listaMsg.innerHTML += `
-                <div class="cameIn" id="teste">
+                <div class="cameIn" id="teste" data-test="message">
                     <p>${mensagem.time} ${mensagem.from} ${mensagem.text}</p>
                 </div>
                 `;
     } else if (mensagem.type === 'message') {
       listaMsg.innerHTML += `
-        <div class="msgAll" id="teste">
+        <div class="msgAll" id="teste" data-test="message">
             <p>${mensagem.time} ${mensagem.from} para todos: ${mensagem.text}</p>
         </div>
         `;
     } else if (mensagem.type === 'private_message') {
       if (mensagem.from === peopleName || mensagem.to === peopleName || mensagem.to === "Todos") {
         listaMsg.innerHTML += `
-                <div class="msgPrivate" id="teste">
+                <div class="msgPrivate" id="teste" data-test="message">
                     <p>${mensagem.time} ${mensagem.from} reservadamente para ${mensagem.to}:  ${mensagem.text}</p>
                 </div>
                 `;
       }
     }
   }
+  const lastMsg = document.querySelector('.chat div:last-child');
+  lastMsg.scrollIntoView();
+
 }
 //Enviar mensagem para o servidor.
 function postMessage() {
@@ -122,10 +123,20 @@ function messageFail() {
   window.location.reload()
 }
 
-//enviar mensagem com o Enter
 
+//enviar mensagem com o Enter
 document.getElementById('myInput').addEventListener('keypress', function (e) {
   if (e.key === 'Enter') {
     postMessage();
   }
 });
+
+
+function sideMenu(){
+  const menuf = document.querySelector('.menuFundo')
+  const menuas = document.querySelector('.amenu')
+
+
+  menuf.classList.toggle('escondido')
+  menuas.classList.toggle('escondido')
+}

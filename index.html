@@ -10,10 +10,20 @@
 </head>
 <body>
 
+    <div onclick="sideMenu()" class="menuFundo escondido"></div>
+    <aside class="amenu escondido">
+        <h1 class="tituloMenu">Escolha um contato
+            para enviar mensagem:</h1>
+        </div>
+        <ul class="listaPessoas">
+            <li></li>
+        </ul>      
+        
+    </aside>
     <header>
         <nav class="menu">
             <img src="imagens/logo 1.png" alt="">
-            <img onclick="sideMenu" src="imagens/people.svg" alt="">
+            <img onclick="sideMenu()" src="imagens/people.svg" alt="" test="open-participants">
         </nav>
     </header>
     
@@ -24,8 +34,8 @@
     </article>
 
     <footer class="enviarMensagem">
-        <input type="text" placeholder="Escreva aqui..." id="myInput">
-        <button onclick="postMessage()" id="submit">
+        <input type="text" placeholder="Escreva aqui..." id="myInput" data-test="input-message">
+        <button onclick="postMessage()" id="submit" test="send-message">
             <img  src="imagens/send.svg" alt="">
         </button>
         
